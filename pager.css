@@ -1,16 +1,4 @@
 /**jquer.pager.css**/
-#loading {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 200px;
-    height: 200px;
-    background: url("../images/loading.gif") no-repeat;
-    font-size: 0;
-    transform: translate(0, -50%);
-}
-
 #pager {
     padding: 0 0;
     font-size: 12px;
@@ -130,8 +118,4 @@
     line-height: 26px;
     color: #333;
     cursor: pointer;
-}
-
-#pager button:hover {
-    background-color: #FDD947;
 }
