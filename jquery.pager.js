@@ -28,8 +28,6 @@
             success: null,
             complete: null,
             error: function() {
-                $('#loading').show(0);
-                $('.ajaxPager').hide(0);
                 window.confirm("抱歉,请求出错,请重新请求！");
             },
 
@@ -94,7 +92,7 @@
                     _self.opts.success(data);
                     if(data && data.data){
                     data=data.data;
-                    _self.opts.totalCount =data.clues_num || data.topic_num || data.regist_num;
+                    _self.opts.totalCount = data.totalCount;
                     _self.getTotalPage();
                     if (_self.opts.totalCount > 0 && _self.opts.page > 0) {
                         var pageTextArr = new Array;
@@ -146,17 +144,11 @@
             }
         },
         createIndexBtn: function (pageTextArr) {
-            /*
-                前：当前页 > 偏移量 + 至少保留 + 1
-                后：当前页 < 总页码 - 偏移量 - 至少保留
-            */
-
             var _self = this;
 
             var shiftingLeftStart = _self.opts.shiftingLeft + _self.opts.preLeast + 1;
             var shiftingRightStart = _self.opts.totalPage - _self.opts.shiftingRight - _self.opts.nextLeast - 1;
 
-            /*页码*/
             if (_self.opts.page > shiftingLeftStart) {
                 for (i = 1; i <= _self.opts.preLeast; i++) {
                     pageTextArr.push(_self.createIndexText(i, i));
