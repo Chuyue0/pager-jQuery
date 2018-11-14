@@ -1,0 +1,137 @@
+/**jquer.pager.css**/
+#loading {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    background: url("../images/loading.gif") no-repeat;
+    font-size: 0;
+    transform: translate(0, -50%);
+}
+
+#pager {
+    padding: 0 0;
+    font-size: 12px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+#pager span {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    padding: 0 10px;
+    height: 26px;
+    line-height: 24px;
+    color: #999;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+#pager span.current {
+    border: solid 1px #FDD947;
+    background-color: #FDD947;
+    color: #333;
+}
+
+#pager span.disenable {
+    border: 1px solid #E6E6E6;
+    background: #fff;
+    color: #999;
+    cursor: default;
+}
+
+#pager span.common {
+    border: solid 1px #FDD947;
+    background-color: #FDD947;
+    color: #333;
+}
+
+#pager span.text {
+    margin-right: 0;
+    border: none;
+    padding: 0;
+    line-height: 26px;
+    background-color: transparent;
+    color: #C9C9C9;
+}
+
+#pager a {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    padding: 0 10px;
+    height: 26px;
+    background-color: #F4F4F4;
+    line-height: 24px;
+    color: #999999;;
+    text-decoration: none;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+#pager span.disenable:hover,
+#pager a:hover {
+    border: solid 1px #FDD947;
+    color: #333;
+}
+
+#pager span.disenable:hover {
+    border-color: #E6E6E6;
+}
+
+#pager span.current:hover {
+    background-color: #FDD947;
+    color: #333;
+}
+
+#pager span.text:hover {
+    border: none;
+    color: #999;
+}
+
+#pager input[type=text] {
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #E6E6E6;
+    width: 36px;
+    height: 26px;
+    background-color: #FFFFFF;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#pager input[type=text]:hover {
+    border-color: #F4F4F4;
+    color: #999999;
+}
+
+#pager button {
+    float: left;
+    left: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    width: 41px;
+    height: 26px;
+    background-color: #FDD947;
+    line-height: 26px;
+    color: #333;
+    cursor: pointer;
+}
+
+#pager button:hover {
+    background-color: #FDD947;
+}
